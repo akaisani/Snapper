@@ -1,6 +1,5 @@
 # Snapper
 
-### Synopsis
 Snapper is a social networking application built for IOS. Snapper allows users to share crucial moments with their friends and family without impacting either of the users storage. Snapper allows users to share pictures made available to the receiver for a show period of time. Snapper was deployed on IOS and use Firebase as its backend.
 
 ### Installation
