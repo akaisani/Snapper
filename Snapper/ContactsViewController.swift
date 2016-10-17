@@ -61,7 +61,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate {
 
     func setUpUIRefresher() {
         let refreshViewBundle = NSBundle.mainBundle().loadNibNamed("refreshView", owner: self, options: nil)
-        var refreshView = refreshViewBundle.first as! UIView
+        var refreshView = refreshViewBundle?.first as! UIView
         refreshView.frame = refresher.bounds
         refreshView.backgroundColor = UIColor.clearColor()
 
@@ -167,8 +167,8 @@ class ContactsViewController: UIViewController, UITableViewDelegate {
                 if (!userImage.imageViewed) {
                     let imageRef = storageRef.child("sentImages").child("\(userImage.senderID)&\(userImage.reciverID)").child(userImage.name)
                     let tempStorageDir = NSURL(fileURLWithPath: NSTemporaryDirectory())
-                    let fileDir = tempStorageDir.URLByAppendingPathComponent("\(userImage.senderID)& \(userImage.reciverID)").URLByAppendingPathExtension("png")
-                    imageRef.writeToFile(fileDir, completion: { (url, error) in
+                    let fileDir = tempStorageDir.URLByAppendingPathComponent("\(userImage.senderID)& \(userImage.reciverID)")?.URLByAppendingPathExtension("png")
+                    imageRef.writeToFile(fileDir!, completion: { (url, error) in
                         if (error != nil) {
                             print(error?.localizedDescription)
 
@@ -288,6 +288,13 @@ class ContactsViewController: UIViewController, UITableViewDelegate {
         let previewVC = mainStoryBoard.instantiateViewControllerWithIdentifier("friendsView")
         previewVC.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
         self.presentViewController(previewVC, animated: true, completion: nil)
+    }
+    @IBAction func showSettings(sender: AnyObject) {
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let previewVC = mainStoryBoard.instantiateViewControllerWithIdentifier("friendsView")
+        previewVC.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
+        self.presentViewController(previewVC, animated: true, completion: nil)
+
     }
 
     func displayAlert(title: String, message: String) {

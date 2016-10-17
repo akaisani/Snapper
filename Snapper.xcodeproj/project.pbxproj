@@ -33,6 +33,7 @@
 		A8619B3F1D50B48300E18319 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8619B3C1D50B48300E18319 /* FBSDKShareKit.framework */; };
 		A86975AD1D8528B6007597A5 /* refreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A86975AC1D8528B6007597A5 /* refreshView.xib */; };
 		A88179C71D55DC9800356D15 /* ViewSwitcherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88179C61D55DC9800356D15 /* ViewSwitcherViewController.swift */; };
+		A8A3A8BF1DAC5A9E00EC40FD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3A8BE1DAC5A9E00EC40FD /* SettingsViewController.swift */; };
 		A8A4E5E01D5203FE00C6AFFB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4E5DF1D5203FE00C6AFFB /* LoginViewController.swift */; };
 		A8C019311D5F6C8C0009A427 /* UserImageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C019301D5F6C8C0009A427 /* UserImageFile.swift */; };
 		A8D232D61D54E73F00D06BE4 /* UserSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D232D51D54E73F00D06BE4 /* UserSignUpViewController.swift */; };
@@ -98,6 +99,7 @@
 		A8619B3C1D50B48300E18319 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		A86975AC1D8528B6007597A5 /* refreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = refreshView.xib; sourceTree = "<group>"; };
 		A88179C61D55DC9800356D15 /* ViewSwitcherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSwitcherViewController.swift; sourceTree = "<group>"; };
+		A8A3A8BE1DAC5A9E00EC40FD /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A8A4E5DF1D5203FE00C6AFFB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A8C019301D5F6C8C0009A427 /* UserImageFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserImageFile.swift; sourceTree = "<group>"; };
 		A8D232D51D54E73F00D06BE4 /* UserSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignUpViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				A8D232D51D54E73F00D06BE4 /* UserSignUpViewController.swift */,
 				A85A762C1D50A49E000FDEB4 /* AppDelegate.swift */,
 				A85A76321D50A49E000FDEB4 /* Main.storyboard */,
+				A8A3A8BE1DAC5A9E00EC40FD /* SettingsViewController.swift */,
 				A85A76351D50A49E000FDEB4 /* Assets.xcassets */,
 				A85A76371D50A49E000FDEB4 /* LaunchScreen.storyboard */,
 				A81A21F51D55FB2C00A2072F /* CameraView.swift */,
@@ -327,11 +330,13 @@
 					A85A763E1D50A49E000FDEB4 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = ZNW8WQ3KY9;
+						LastSwiftMigration = 0800;
 						TestTargetID = A85A76281D50A49E000FDEB4;
 					};
 					A85A76491D50A49E000FDEB4 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = ZNW8WQ3KY9;
+						LastSwiftMigration = 0800;
 						TestTargetID = A85A76281D50A49E000FDEB4;
 					};
 				};
@@ -536,6 +541,7 @@
 				A8FB53421D59F15D0069EFBD /* UsersSelectViewController.swift in Sources */,
 				A88179C71D55DC9800356D15 /* ViewSwitcherViewController.swift in Sources */,
 				A8D232D61D54E73F00D06BE4 /* UserSignUpViewController.swift in Sources */,
+				A8A3A8BF1DAC5A9E00EC40FD /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,10 +690,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Snapper",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = Snapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = akaisani.Snapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -700,10 +708,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Snapper",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = Snapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = akaisani.Snapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -716,6 +726,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = akaisani.SnapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snapper.app/Snapper";
 			};
 			name = Debug;
@@ -729,6 +740,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = akaisani.SnapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snapper.app/Snapper";
 			};
 			name = Release;
@@ -741,6 +753,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = akaisani.SnapperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = Snapper;
 			};
 			name = Debug;
@@ -753,6 +766,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = akaisani.SnapperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = Snapper;
 			};
 			name = Release;

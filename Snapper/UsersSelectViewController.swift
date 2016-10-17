@@ -37,7 +37,7 @@ class UsersSelectViewController: UIViewController, UITableViewDelegate {
 
     func setUpUIRefresher() {
         let refreshViewBundle = NSBundle.mainBundle().loadNibNamed("refreshView", owner: self, options: nil)
-        let refreshView = refreshViewBundle.first as! UIView
+        let refreshView = refreshViewBundle?.first as! UIView
         refreshView.frame = refresher.bounds
         refreshView.backgroundColor = UIColor.clearColor()
 

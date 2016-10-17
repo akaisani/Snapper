@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactsViewController" customModule="Snapper" customModuleProvider="target">
@@ -18,10 +19,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omK-ca-gOk">
-                    <rect key="frame" x="0.0" y="19" width="320" height="44"/>
                     <items>
                         <navigationItem title="Snapper" id="ND4-le-T8i">
-                            <barButtonItem key="leftBarButtonItem" title="Settings" id="Q7A-Pm-Ct8"/>
+                            <barButtonItem key="leftBarButtonItem" title="Settings" id="Q7A-Pm-Ct8">
+                                <connections>
+                                    <action selector="showSettings:" destination="-1" id="WWQ-cq-U8k"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" title="Friends" id="Zsi-x4-7Tl">
                                 <connections>
                                     <action selector="showFriends:" destination="-1" id="QQA-Du-mgv"/>
@@ -31,15 +35,14 @@
                     </items>
                 </navigationBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dP2-NU-Vuc">
-                    <rect key="frame" x="0.0" y="63" width="320" height="505"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="KVx-kM-rrD"/>
                         <outlet property="delegate" destination="-1" id="84C-fp-l0M"/>
                     </connections>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="dP2-NU-Vuc" secondAttribute="trailing" id="8go-St-aFO"/>
                 <constraint firstAttribute="bottom" secondItem="dP2-NU-Vuc" secondAttribute="bottom" id="DiY-go-LJr"/>
@@ -49,7 +52,6 @@
                 <constraint firstAttribute="trailing" secondItem="omK-ca-gOk" secondAttribute="trailing" id="hWh-J2-Ght"/>
                 <constraint firstItem="omK-ca-gOk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="id3-sl-dCG"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
 </document>

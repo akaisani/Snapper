@@ -79,7 +79,7 @@ class CameraView: UIViewController, UINavigationControllerDelegate, UIImagePicke
                 } else {
                     let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
                     let dataProvider = CGDataProviderCreateWithCFData(imageData)
-                    let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, .RenderingIntentDefault)
+                    let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider!, nil, true, .RenderingIntentDefault)
                     var image: UIImage!
                     if (self.onBackCam) {
                         image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
